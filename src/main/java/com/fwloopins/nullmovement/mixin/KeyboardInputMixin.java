@@ -33,26 +33,20 @@ public class KeyboardInputMixin extends Input {
 
         if (forward && backward) {
             movementForward = getMultiplier(lastForward);
+            if (slowDown)
+                movementForward *= slowDownFactor;
         }
 
         if (left && right) {
             movementSideways = getMultiplier(lastSideways);
-        }
-
-        // Recalculate slowDown from target method (not sure if this does anything in vanilla code?)
-        if (slowDown) {
-            movementForward *= slowDownFactor;
-            movementSideways *= slowDownFactor;
+            if (slowDown)
+                movementSideways *= slowDownFactor;
         }
     }
 
     // This will run if both keys on an axis are now being held, if the last held key prior to both being held was positive, it will return negative and vice-versa
     @Unique
     public float getMultiplier(boolean lastPressedWasPositive) {
-        if (lastPressedWasPositive) {
-            return -1.0f;
-        } else {
-            return 1.0f;
-        }
+        return lastPressedWasPositive ? -1.0f : 1.0f;
     }
 }
