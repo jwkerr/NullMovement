@@ -3,7 +3,7 @@
   "id": "nullmovement",
   "version": "${version}",
   "name": "Null Movement",
-  "description": "Allows for smoother movement by preventing movement blocking, inspired by the Source script of the same name",
+  "description": "Allows for smoother movement in Minecraft by preventing movement blocking, inspired by the Source script of the same name",
   "authors": [
     "Fruitloopins"
   ],
