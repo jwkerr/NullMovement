@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "nullmovement",
+  "version": "${version}",
+  "name": "Null Movement",
+  "description": "Inspired by the Source script of the same name, allows for smoother movement by preventing movement blocking",
+  "authors": [
+    "Fruitloopins"
+  ],
+  "contact": {
+    "website": "https://fwloopins.com",
+    "repo": "https://github.com/Fruitloopins/NullMovement"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/nullmovement/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "com.fwloopins.nullmovement.NullMovement"
+    ]
+  },
+  "mixins": [
+    "nullmovement.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
