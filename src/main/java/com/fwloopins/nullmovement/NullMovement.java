@@ -5,14 +5,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class NullMovement implements ModInitializer {
-    public static final Logger LOGGER = LoggerFactory.getLogger("NullMovement");
+    public static final Logger LOGGER = LoggerFactory.getLogger("Null Movement");
 
     @Override
     public void onInitialize() {
-        logInfo("NullMovement initialised");
+        logInfo("Null Movement initialised");
     }
 
     public static void logInfo(String msg) {
-        LOGGER.info("[NullMovement] " + msg);
+        LOGGER.info("[Null Movement] " + msg);
     }
 }
